@@ -129,3 +129,157 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+@keyframes kenburns-top {
+  0% {
+    transform: scale(1) translateY(0);
+    transform-origin: 10% 10%;
+  }
+  100% {
+    transform: scale(0.9) translateY(0px);
+    transform-origin: top;
+  }
+}
+@keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  /** border: 1px solid grey; **/
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "DM Mono", monospace;
+  line-height: 1.5;
+}
+h1 {
+  font-family: "Marmelad", sans-serif;
+  font-size: 6rem;
+  letter-spacing: 10px;
+  display: flex;
+  justify-content: center;
+  animation: focus-in-expand 1.5s ease-in backwards;
+}
+
+h2 {
+  font-size: 4rem;
+  letter-spacing: 10px;
+  display: flex;
+  justify-content: center;
+  padding: 2%;
+}
+
+section {
+  padding: 2% 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  width: 10%;
+  text-align: center;
+}
+
+/** header section styles **/
+
+nav {
+  font-family: "Reenie Beanie", cursive;
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  margin: 4px 0;
+}
+
+.home,
+.about,
+.cont,
+.proj {
+  background-color: white;
+}
+
+.home:hover {
+  animation: focus-in-expand 0.6s ease-in backwards;
+}
+
+.about:hover {
+  animation: focus-in-expand 0.6s ease-in backwards;
+}
+
+.cont:hover {
+  animation: focus-in-expand 0.6s ease-in backwards;
+}
+
+.proj:hover {
+  animation: focus-in-expand 0.6s ease-in backwards;
+}
+
+.horzline {
+  border-top: 1px dashed black;
+  padding: 1%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.textone {
+  font-size: 2rem;
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.c-image {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.c-image:hover {
+  animation: kenburns-top 5s cubic-bezier(0.445, 0.05, 0.55, 0.95) both;
+}
+
+.portfolio-box {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 5px 5px;
+  margin-bottom: 35px;
+}
+
+.sidetext {
+  margin: 10% 10%;
+  text-align: center;
+}
+
+.contact-me {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: blanchedalmond;
+  padding: 2%;
+}
+
+.contact-me a {
+  font-size: 2rem;
+  text-decoration: none;
+  color: black;
+}
