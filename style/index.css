@@ -94,6 +94,7 @@ video {
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
+
 article,
 aside,
 details,
@@ -195,8 +196,6 @@ section {
 a {
   text-decoration: none;
   color: #4f4f4f;
-  width: 10%;
-  text-align: center;
 }
 
 /** header section styles **/
@@ -207,6 +206,7 @@ nav {
   display: flex;
   justify-content: center;
   margin: 2% 0;
+  width: 100%;
 }
 
 .home,
@@ -262,15 +262,25 @@ nav {
 
 .portfolio-box {
   display: flex;
+  align-content: space-between;
   width: 100%;
-  justify-content: space-between;
   padding: 1% 1%;
   margin-bottom: 3%;
+  margin: 0 auto;
+}
+
+.portfolio-box a {
+  width: 20%;
+  display: flex;
+  padding: 1% 1%;
+  align-content: space-between;
 }
 
 .sidetext {
-  margin: 10% 10%;
+  margin: 2% 2%;
   text-align: center;
+  width: 60%;
+  align-items: baseline;
 }
 
 .contact-me {
@@ -279,10 +289,77 @@ nav {
   justify-content: center;
   background-color: blanchedalmond;
   padding: 2%;
+  width: 100%;
 }
 
 .contact-me a {
   font-size: 2rem;
   text-decoration: none;
+  text-align: center;
   color: #4f4f4f;
+  width: 100%;
+}
+
+/*styles for table at 800px*/
+
+@media (max-width: 800px) {
+  .links .a {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  .portfolio-box {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  .contact-me {
+    justify-content: space-evenly;
+    width: 100%;
+  }
+}
+
+/*styles for table at 500px*/
+
+@media (max-width: 500px) {
+  .links {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 4rem;
+    text-align: center;
+    align-content: center;
+  }
+
+  .textone {
+    width: 70%;
+    font-size: 1.5rem;
+  }
+
+  .portfolio-box {
+    display: flex;
+    width: 50%;
+    flex-wrap: wrap;
+  }
+
+  .sidetext {
+    width: 100%;
+  }
+
+  .contact-me {
+    justify-content: space-evenly;
+    width: 100%;
+  }
 }
